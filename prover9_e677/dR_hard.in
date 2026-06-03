@@ -1,0 +1,9 @@
+set(auto2). assign(max_seconds,300). assign(max_weight,90). assign(max_given,100000).
+formulas(assumptions).
+  x * (x \ y) = y.   x \ (x * y) = y.
+  x = y * (x * ((y * x) * y)).
+  x \ y = y * ((x * y) * x).        % derived left-division formula (helps earlier proofs)
+end_of_list.
+formulas(goals).
+  (a * c) * a = c & (b * c) * b = c -> a = b.
+end_of_list.

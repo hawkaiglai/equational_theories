@@ -1,0 +1,9 @@
+assign(max_seconds,60).
+formulas(assumptions).
+  x * (x \ y) = y.   x \ (x * y) = y.
+  (x * y) / y = x.   (x / y) * y = x.
+  x = y * (x * ((y * x) * y)).
+end_of_list.
+formulas(goals).
+  z * (x * (x * x)) = x & w * (x * (x * x)) = x -> z = w.
+end_of_list.

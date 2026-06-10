@@ -1,0 +1,26 @@
+============================== PROOF =================================
+
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 16.
+% Level of proof is 7.
+% Maximum clause weight is 19.000.
+% Given clauses 12.
+
+1 a = b # label(non_clause) # label(goal).  [goal].
+3 x \ (x * y) = y.  [assumption].
+4 x = y * (x * ((y * x) * y)).  [assumption].
+5 x * (y * ((x * y) * x)) = y.  [copy(4),flip(a)].
+6 a * x = b * x.  [assumption].
+7 b * x = a * x.  [copy(6),flip(a)].
+8 b != a.  [deny(1)].
+10 x \ y = y * ((x * y) * x).  [para(5(a,1),3(a,1,2))].
+12 (x * y) * ((x * (x * y)) * x) = y.  [back_rewrite(3),rewrite([10(2)])].
+13 a * (x * ((a * x) * b)) = x.  [para(7(a,1),5(a,1,2,2,1)),rewrite([7(7)])].
+24 (x * ((x * x) * x)) * (x * x) = (x * x) * x.  [para(5(a,1),12(a,1,2,1))].
+26 x * ((a * x) * b) = x * ((a * x) * a).  [para(13(a,1),12(a,1,1)),rewrite([13(8)]),flip(a)].
+27 (a * a) * b = (a * a) * a.  [para(13(a,1),12(a,1,2,1)),rewrite([26(7),24(11)]),flip(a)].
+31 x * (((y * x) * x) * (y * x)) = (y * (y * x)) * y.  [para(12(a,1),12(a,1,1)),rewrite([12(6)])].
+39 b = a.  [para(27(a,1),5(a,1,2,2,1)),rewrite([7(14),31(14),12(11)]),flip(a)].
+40 $F.  [resolve(39,a,8,a)].
+
+============================== end of proof ==========================

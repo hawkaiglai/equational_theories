@@ -1,0 +1,5 @@
+formulas(assumptions).
+  x = y * (x * ((y * x) * y)).
+  a * w = b * w.
+  a != b.
+end_of_list.

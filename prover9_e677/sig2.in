@@ -1,0 +1,9 @@
+assign(max_seconds,120). assign(max_weight,60). assign(max_given,30000).
+formulas(assumptions).
+  x * (x \ y) = y.   x \ (x * y) = y.
+  x = y * (x * ((y * x) * y)).
+  a * w = b * w.
+end_of_list.
+formulas(goals).
+  a = b.
+end_of_list.

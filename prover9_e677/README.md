@@ -10,3 +10,7 @@ Binaries: ~/ladr/provers.src/prover9 , ~/ladr/mace4.src/mace4 (rebuild: ~/ladr/R
 Summary: deg_R<=1 is provable for quasigroup E677 magmas (right-cancellation) but OPEN for
 non-right-cancellative ones (e.g. 77/65) -- mirrors the E677|=fin E255 hard case (non-QG).
 deg_R>=1 (existence) is equivalent to E255 itself.
+
+- s2u.in       : slice-2 uniqueness z*(x*(x*x))=x & w*(...)=x -> z=w. E677+left-QG. SEARCH FAILED.
+- s2u_qg.in    : same from E677+full-QG. PROVED (8 steps, right-cancellation).
+- s2u_cex.in   : Mace4 counterexample search. None found n<=12.

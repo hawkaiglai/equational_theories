@@ -1,0 +1,6 @@
+lean-4.31.0-linux/
+*.tar.zst
+elan-init.sh
+dl_*.txt
+dl_*.log
+*.err
